@@ -1,0 +1,61 @@
+TABLES:
+
+1. ORCID
+2. THEME
+3. PUBLISHER
+4. JOURNAL
+5. PUBLICATION
+6. AUTHOR
+7. CITESCORE
+8. SJR
+9. SNIP
+10. JOURNALTHEME
+11. ORCIDTHEME
+
+A Preventive Action Management Platform in Healthcare Information Systems.
+
+Knowledge acquisition process for intelligent decision support in critical health care
+
+SCRIPT
+
+create table orcid (id text primary key not null, name text not null, citations int not null, citedby int not null, status text not null, last_upd_date date not null);
+create table theme (id serial primary key, theme text unique not null);
+create table publisher (id serial primary key, name text unique not null);
+create table journal (id text primary key not null, name text not null, issn text, eissn text, start_year int not null, end_year int, source_id text, scopus_source text, homepage text, publisher_id int references publisher(id));
+create table publication (id serial primary key, title text not null, type text not null, date timestamp not null, citations int not null, wosuid text, eid text, pref_source text not null, journal_id text, orcid_id text references orcid(id));
+create table author (name text not null, indexed_name text not null, publication_id int references publication(id));
+create table citescore (id serial primary key, year int not null, value real not null, journal_id text references journal(id));
+create table sjr (id serial primary key, year int not null, value real not null, journal_id text references journal(id));
+create table snip (id serial primary key, year int not null, value real not null, journal_id text references journal(id));
+create table journaltheme (journal_id text references journal(id), theme_id int references theme(id));
+create table orcidtheme (orcid_id text references orcid(id), theme_id int references theme(id));
+
+
+DROPS:
+
+drop table author, publication, citescore, journal, journaltheme, orcid, orcidtheme, publisher, sjr, snip, theme cascade;
+create table orcid (id text primary key not null, name text not null, citations int not null, citedby int not null, status text not null, last_upd_date date not null);
+create table theme (id serial primary key, theme text unique not null);
+create table publisher (id serial primary key, name text unique not null);
+create table journal (id text primary key not null, name text not null, issn text, eissn text, start_year int not null, end_year int, source_id text, scopus_source text, homepage text, publisher_id int references publisher(id));
+create table publication (id serial primary key, title text not null, type text not null, date timestamp not null, citations int not null, wosuid text, eid text, pref_source text not null, journal_id text, orcid_id text references orcid(id));
+create table author (name text not null, indexed_name text not null, publication_id int references publication(id));
+create table citescore (id serial primary key, year int not null, value real not null, journal_id text references journal(id));
+create table sjr (id serial primary key, year int not null, value real not null, journal_id text references journal(id));
+create table snip (id serial primary key, year int not null, value real not null, journal_id text references journal(id));
+create table journaltheme (journal_id text references journal(id), theme_id int references theme(id));
+create table orcidtheme (orcid_id text references orcid(id), theme_id int references theme(id));
+
+QUERIES:
+
+Nome e Tema de ORCIDS:
+
+select o.name, t.theme from orcid o join orcidtheme ot on o.id = ot.orcid_id join theme t on t.id = ot.theme_id;
+
+Nome e Publicações
+
+select o.name, p.title from orcid o join publication p on p.orcid_id = o.id;
+
+Publicações e Autores
+
+select p.title, a.name from publication p join author a on a.publication_id = p.id where p.title = ...;

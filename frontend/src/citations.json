@@ -1,0 +1,129 @@
+{
+	"abstract-citations-response": { 
+		"h-index": "1", 
+		"identifier-legend": { 
+			"identifier": [ 
+				{ 
+					"@_fa": "true",
+					"dc:identifier": "SCOPUS_ID:38349047757",
+					"prism:doi": null, 
+					"pii": null, 
+					"scopus_id" : "38349047757" 
+				} 
+			] 
+		}, 
+		"citeInfoMatrix": { 
+			"citeInfoMatrixXML": { 
+				"citationMatrix": { 
+					"citeInfo": [ 
+						{
+							"@_fa": "true", 
+							"dc:identifier": "SCOPUS_ID:38349047757", 
+							"prism:url": "https://api.elsevier.com/content/abstract/scopus_id/38349047757", 
+							"dc:title": "The halt condition in genetic programming", 
+							"author": [ 
+								{ 
+									"@_fa": "true", 
+									"initials": "J.", 
+									"index-name": "Neves J.",
+									"surname": "Neves", 
+									"authid": "7102055608", 
+									"author-url": "https://api.elsevier.com/content/author/author_id/7102055608"
+								}, 
+								{ 
+									"@_fa": "true", 
+									"initials": "J.",
+									"index-name": "Machado J.", 
+									"surname": "Machado", 
+									"authid": "56196003100", 
+									"author-url": "https://api.elsevier.com/content/author/author_id/56196003100" 
+								}, 
+								{ 
+									"@_fa": "true", 
+									"initials": "C.", 
+									"index-name": "Analide C.", 
+									"surname": "Analide", 
+									"authid": "6504173125", 
+									"author-url": "https://api.elsevier.com/content/author/author_id/6504173125"
+								}, 
+								{ 
+									"@_fa": "true", 
+									"initials": "A.", 
+									"index-name": "Abelha A.", 
+									"surname": "Abelha", 
+									"authid": "6506287527", 
+									"author-url": "https://api.elsevier.com/content/author/author_id/6506287527" 
+								}, 
+								{ 
+									"@_fa": "true", 
+									"initials": "L.", 
+									"index-name": "Brito L.", 
+									"surname": "Brito", 
+									"authid": "8248070900", 
+									"author-url": "https://api.elsevier.com/content/author/author_id/8248070900" 
+								} 
+							], 
+							"citationType": { 
+								"@code": "cp", 
+								"$": "Conference Paper" 
+							}, 
+							"sort-year": "2007", 
+							"prism:publicationName": "Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)", 
+							"prism:volume": "4874", 
+							"prism:startingPage": "160", 
+							"prism:endingPage": "169",
+							"prism:issn": "0302-9743", 
+							"pcc": "33", 
+							"cc": [ 
+								{ 
+									"$": "17" 
+								}, 
+								{ 
+									"$": "9" 
+								}, 
+								{ 
+									"$": "3" 
+								} 
+							], 
+							"lcc": "0", 
+							"rangeCount": "29", 
+							"rowTotal": "62" 
+						} 
+					] 
+				} 
+			} 
+		}, 
+		"citeColumnTotalXML": { 
+			"citeCountHeader": {
+				"prevColumnHeading": "previous", 
+				"columnHeading": [ 
+					{ 
+						"$": "2016" 
+					}, 
+					{ 	
+						"$" : "2017" 
+					}, 
+					{ 
+						"$": "2018" 
+					}
+				], 
+				"laterColumnHeading": "later", 
+				"prevColumnTotal": "33", 
+				"columnTotal": [ 
+					{ 
+						"$": "17" 
+					}, 
+					{ 
+						"$": "9" 
+					},
+					{ 
+						"$": "3" 
+					} 
+				], 
+				"laterColumnTotal": "0", 
+				"rangeColumnTotal": "29", 
+				"grandTotal": "62" 
+			} 
+		} 
+	} 
+}
